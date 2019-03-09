@@ -54,7 +54,7 @@ class SmartBackgroundManager private constructor(
     )
 
     private val displayMetrics: DisplayMetrics = DisplayMetrics().also {
-        activity.windowManager.defaultDisplay.getMetrics(it)
+        activity.windowManager.defaultDisplay.getRealMetrics(it)
     }
 
     private val backgroundUpdateDelay: Long = updateDelay
